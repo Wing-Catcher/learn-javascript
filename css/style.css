@@ -1,0 +1,71 @@
+body{
+    background-color: rgb(20,20,20);
+    background-image: url(/assets/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aliceblue;
+    margin: 0px;
+}
+nav{
+    display: flex;
+    height: 60px;
+    background-color: aliceblue;
+    color: rgb(20,20,20);
+    padding: 0px 30px;
+    justify-content: space-between;
+}
+.nav-items{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+#logo-title p {
+    font-size: 1.2em;
+    font-weight: 550;
+}
+#logo-title img {
+    height: 80%;
+    border-radius: 10px;
+}
+#buttons button {
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    width: 80px;
+    transition: all 0.2s;
+}
+#buttons button:hover {
+    background-color: aquamarine;
+    transform: scale(1.1);
+}
+
+.margin{
+    margin: 30px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 700px;
+    gap: 10px;
+}
+section{
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background-color: bisque;
+    justify-content: center;
+}
+footer p{
+    color: rgb(20,20,20);
+    font-size: 1.2em
+}
