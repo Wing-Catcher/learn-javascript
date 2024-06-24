@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link rel="stylesheet" href="/css/style_base.css">
+    <link rel="icon" type="image/jpeg" href="assets/jslogo.jpeg">
+</head>
+<body>
+    <nav>
+        <div class="nav-items">
+            <img src="assets/bro.png" alt="Bro Code">
+            <p>variables</p>
+        </div>
+        <div class="nav-items">
+            <a href="index.html"><button>Homepage</button></a>
+        </div>
+    </nav>
+    <main class="margin">
+        <div class="container">
+            <section>
+                <h1>let x = "hello world"</h1>
+                <hr>
+                <p>JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM). </p>
+            </section>
+            <section>
+                <h1>Main Content</h1>
+                <hr>
+                <p id="p1"></p>
+                <p id="p2"></p>
+                <p id="p3"></p>
+            </section>
+            <section>
+                <h1>Scripts</h1>
+                <hr>
+                <div id="code">
+                    <pre>
+// Seperated
+let x;
+x = 1000;
+console.log(x)
+
+// Combined (declaration and assignment)
+let y = 2000;
+console.log(y)
+
+// datatypes
+let age = 25;
+let price = 10.99;
+let gpa = 4.0;
+console.log(`you are ${age} years old`);
+console.log(`The price is ${price} dollars`);
+console.log(`your gpa is ${gpa}.`);
+//typeof
+console.log(typeof age);
+console.log(typeof price);
+console.log(typeof gpa);
+
+//strings
+// strings can nclude numbers, but the numbers cant be used for math operation
+let name = "Bro";
+let food = "soto babat"
+let email = "brocode123@gmail.com"
+console.log(typeof name);
+console.log(`your name is ${name}`);
+console.log(`You like ${food}.`);
+console.log(`Your email is ${email}`);
+
+//booleans
+let online = false;
+let sale = false;
+let isStudent = true;
+console.log(`bro is online: ${online}`);
+console.log(`is this sale? ${sale}`);
+console.log(`Is this a student ${isStudent}`);
+
+let fullName = "Raffy hmad Jaliyyan";
+age = 18;
+isStudent = true;
+document.getElementById("p1").textContent = fullName;
+document.getElementById("p2").textContent = age;
+document.getElementById("p3").textContent = `Is he student: ${isStudent}`
+                        </pre>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>So sit back, relax, and enjoy the show! | Theme: RGB 30 30 30</p>
+    </footer>
+    <script src="script/1. variables.js"></script>
+</body>
+</html>

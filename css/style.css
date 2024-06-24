@@ -68,9 +68,13 @@ section{
 
 #links button {
     height: 40px;
+    font-family: monospace;
+    font-size: 1.2em;
+    font-weight: 700;
     background-color:azure ;
     border-radius: 10px;
     padding: 5px;
+    border: none;
     transition: all 0.2s;
 }
 #links button:hover {
