@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
+    <title>Constant</title>
     <link rel="stylesheet" href="/css/style_base.css">
     <link rel="icon" type="image/jpeg" href="assets/jslogo.jpeg">
 </head>
@@ -12,7 +12,7 @@
         <div class="nav-items">
             <img src="assets/bro.png" alt="Bro Code">
             <!--Nav title-->
-            <p>Title</p>
+            <p>Constant</p>
         </div>
         <div class="nav-items">
             <a href="index.html"><button>Homepage</button></a>
@@ -22,13 +22,19 @@
         <div class="container">
             <section>
                 <!--content title-->
-                <h1>console.log("hello world")</h1>
+                <h1>const x =</h1>
                 <hr>
                 <p>JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM). </p>
             </section>
             <section>
                 <h1>Main Content</h1>
                 <hr>
+                <h3>Enter the radius of a circle:</h3>
+                <label for="myNum">Enter: </label>
+                <input type="number" id="myNum">
+                <button id="myBtn" onclick="execute()">Execute</button>
+                <h3 id="myH3">The result: </h3>
+                <button onclick="reset()">Reset</button>
             </section>
             <section>
                 <h1>Scripts</h1>
@@ -41,6 +47,6 @@ hello world
     <footer>
         <p>So sit back, relax, and enjoy the show! | Theme: <span style="color: rgb(251, 255, 43); background-color: black;">Solid Yellow</span></p>
     </footer>
-    <script src=""></script>
+    <script src="script/5. const.js"></script>
 </body>
 </html>

@@ -65,12 +65,13 @@ hr {
     padding: 10px;
     border: 1px solid white;
     border-radius: 10px;
+    overflow: scroll;
 }
 footer{
     display: flex;
     height: 40px;
     background-color: aliceblue;
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: rgb(30,30,30);
     justify-content: center;
     align-items: center;

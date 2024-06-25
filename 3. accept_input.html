@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
+    <title>Inputs</title>
     <link rel="stylesheet" href="/css/style_base.css">
     <link rel="icon" type="image/jpeg" href="assets/jslogo.jpeg">
 </head>
@@ -11,8 +11,7 @@
     <nav>
         <div class="nav-items">
             <img src="assets/bro.png" alt="Bro Code">
-            <!--Nav title-->
-            <p>Title</p>
+            <p>accept user input</p>
         </div>
         <div class="nav-items">
             <a href="index.html"><button>Homepage</button></a>
@@ -21,26 +20,40 @@
     <main class="margin">
         <div class="container">
             <section>
-                <!--content title-->
-                <h1>console.log("hello world")</h1>
+                <h1>document.getElementById("var")</h1>
                 <hr>
                 <p>JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM). </p>
             </section>
             <section>
                 <h1>Main Content</h1>
                 <hr>
+                <h3 id="myH1">Welcomee</h3>
+                <label for="mytext">Username: </label>
+                <input id="mytext" type="text"><br><br>
+                <button id="mySubmit">Submit</button>
             </section>
             <section>
                 <h1>Scripts</h1>
                 <pre id="code">
-hello world
+/*
+How to accept user input:
+1. Easy way = Windows prompt
+2. Professional way = HTML textbox
+*/
+let username;
+//username = window.prompt("Whats your username");
+document.getElementById("mySubmit").onclick = function(){
+    username = document.getElementById("mytext").value;
+    console.log(username);
+    document.getElementById("myH1").textContent = `Hello ${username}`
+}
                 </pre>
             </section>
         </div>
     </main>
     <footer>
-        <p>So sit back, relax, and enjoy the show! | Theme: <span style="color: rgb(251, 255, 43); background-color: black;">Solid Yellow</span></p>
+        <p>So sit back, relax, and enjoy the show! | Theme: RGB 30 30 30</p>
     </footer>
-    <script src=""></script>
+    <script src="script/3. accept_input.js"></script>
 </body>
 </html>

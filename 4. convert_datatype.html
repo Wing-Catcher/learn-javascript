@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
+    <title>Datatypes</title>
     <link rel="stylesheet" href="/css/style_base.css">
     <link rel="icon" type="image/jpeg" href="assets/jslogo.jpeg">
 </head>
@@ -11,8 +11,7 @@
     <nav>
         <div class="nav-items">
             <img src="assets/bro.png" alt="Bro Code">
-            <!--Nav title-->
-            <p>Title</p>
+            <p>convert datatype</p>
         </div>
         <div class="nav-items">
             <a href="index.html"><button>Homepage</button></a>
@@ -21,8 +20,7 @@
     <main class="margin">
         <div class="container">
             <section>
-                <!--content title-->
-                <h1>console.log("hello world")</h1>
+                <h1>Number()</h1>
                 <hr>
                 <p>JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM). </p>
             </section>
@@ -33,7 +31,31 @@
             <section>
                 <h1>Scripts</h1>
                 <pre id="code">
-hello world
+/*
+type conversion = change datatype of a value to another
+(strings, number, booleans)
+
+let age;
+age = window.prompt("How old are you");
+age = Number(age)
+age += 1;
+console.log(age, typeof age)
+*/
+
+let x = "pizza";
+let y = "pizza";
+let z = "";
+
+x = Number(x);
+y = String(y);
+z = Boolean (z);
+
+// NaN not a number
+// false for nothing in string
+
+console.log(x, typeof x);
+console.log(y, typeof y);
+console.log(z, typeof z);
                 </pre>
             </section>
         </div>
@@ -41,6 +63,6 @@ hello world
     <footer>
         <p>So sit back, relax, and enjoy the show! | Theme: <span style="color: rgb(251, 255, 43); background-color: black;">Solid Yellow</span></p>
     </footer>
-    <script src=""></script>
+    <script src="script/4. convert_datatype.js"></script>
 </body>
 </html>
