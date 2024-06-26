@@ -1,6 +1,6 @@
 body{
     background-color: rgb(20,20,20);
-    background-image: url(/assets/background.jpg);
+    background-image: url(../assets/background.jpg);
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
