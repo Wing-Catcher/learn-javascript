@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checked Properties</title>
+    <link rel="stylesheet" href="/css/style_base.css">
+    <link rel="icon" type="image/jpeg" href="assets/jslogo.jpeg">
+</head>
+<body>
+    <nav>
+        <div class="nav-items">
+            <img src="assets/bro.png" alt="Bro Code">
+            <!--Nav title-->
+            <p>Checked Properties</p>
+        </div>
+        <div class="nav-items">
+            <a href="index.html"><button>Homepage</button></a>
+        </div>
+    </nav>
+    <main class="margin">
+        <div class="container">
+            <section>
+                <!--content title-->
+                <h1>Checked Properties</h1>
+                <hr>
+                <p>JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM). </p>
+            </section>
+            <section>
+                <h1>Main Content</h1>
+                <hr>
+                <input type="checkbox" id="myCheck">
+                <label for="myCheck">Subscribe</label><br>
+                <input type="radio" id="visaBtn" name="card">
+                <label for="visaBtn">VISA</label><br>
+                <input type="radio" id="masterBtn" name="card">
+                <label for="masterBtn">Master Card</label><br>
+                <input type="radio" id="paypalBtn" name="card">
+                <label for="paypalBtn">Pay Pal</label><br><br>
+                <button type="submit" id="mySubmit">Submit</button>
+                <p id="subResult"></p>
+                <p id="paymentResult"></p>
+            </section>
+            <section>
+                <h1>Scripts</h1>
+                <pre id="code">
+// .checked = property that determines the checked state of HTML checkbox
+//            or radio button element
+
+const subscribe = document.getElementById("myCheck");
+const visa = document.getElementById("visaBtn");
+const mastercard = document.getElementById("masterBtn");
+const paypal = document.getElementById("paypalBtn");
+const submit = document.getElementById("mySubmit");
+const subResult = document.getElementById("subResult");
+const paymentResult = document.getElementById("paymentResult");
+
+submit.onclick = function(){
+    if (subscribe.checked){
+        subResult.textContent = "Thanks for subscribing!"
+        if (visa.checked){
+            paymentResult.textContent = "You are now choosing Visa as payment method"
+        }
+        else if (mastercard.checked){
+            paymentResult.textContent = " You are now choosing MasterCard as payment method"
+        }
+        else if (paypal.checked){
+            paymentResult.textContent = " You are now choosing PayPal as payment method"
+        }
+        else {
+            paymentResult.textContent = "You do not choosing the payment method"
+        }
+    }
+    else{
+        subResult.textContent = "Please subscribe to continue"
+        paymentResult.textContent = ""
+    }
+}
+                </pre>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>So sit back, relax, and enjoy the show! | Theme: <span style="color: rgb(251, 255, 43); background-color: black;">Solid Yellow</span></p>
+    </footer>
+    <script src="script/10. checked_properties.js"></script>
+</body>
+</html>

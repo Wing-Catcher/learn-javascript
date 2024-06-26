@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counter</title>
+    <title>Random</title>
     <link rel="stylesheet" href="/css/style_base.css">
-    <link rel="stylesheet" href="css/6. counter.css">
+    <link rel="stylesheet" href="css/8. random_num.css">
     <link rel="icon" type="image/jpeg" href="assets/jslogo.jpeg">
 </head>
 <body>
@@ -13,7 +13,7 @@
         <div class="nav-items">
             <img src="assets/bro.png" alt="Bro Code">
             <!--Nav title-->
-            <p>Counter</p>
+            <p>Random Numbers</p>
         </div>
         <div class="nav-items">
             <a href="index.html"><button>Homepage</button></a>
@@ -23,46 +23,48 @@
         <div class="container">
             <section>
                 <!--content title-->
-                <h1>Counter in website</h1>
+                <h1>Guess your number</h1>
                 <hr>
                 <p>JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM). </p>
             </section>
             <section>
                 <h1>Main Content</h1>
                 <hr>
-            </section>
-            <section>
-                <label id="countLabel">0</label><br>
-                <div id="btnContainer">
-                    <button onclick="decrease()" class="buttons" id="decreaseBtn">Decrease</button>
-                    <button onclick="reset()" class="buttons" id="resetBtn">Reset</button>
-                    <button onclick="increase()" class="buttons" id="increaseBtn">Increase</button>
-                </div>
+                <div id="roller">
+                    <label id="myLabel1"></label>
+                    <label id="myLabel2"></label>
+                    <label id="myLabel3"></label><br>
+                    <button id="myButton">Roll</button>
+                </div> 
             </section>
             <section>
                 <h1>Scripts</h1>
                 <pre id="code">
-// Counter program
+// Random number generator
 
-const decreaseBtn = document.getElementById("decreaseBtn");
-const resetBtn = document.getElementById("resetBtn");
-const increaseBtn = document.getElementById("increaseBtn");
-const countLabel = document.getElementById("countLabel");
-let count = 0;
+// logic = set the number in range from zero to 6 exclusive
+// then well round it to become integer val
+// then we add plus 1 to make the output no zero (Just 1 to 6 integer)
+const myButton = document.getElementById("myButton");
+const label1 = document.getElementById("myLabel1");
+const label2 = document.getElementById("myLabel2");
+const label3 = document.getElementById("myLabel3");
+const min = 1;
+const max = 6;
+let randomNum1;
+let randomNum2;
+let randomNum3;
 
-function decrease() {
-    count--;
-    countLabel.textContent = count;
-}
-function increase(){
-    count++;
-    countLabel.textContent = count;
-}
-function reset() {
-    count = 0
-    countLabel.textContent = count;
-}
 
+// js is blind of id so they need to make as if variables
+myButton.onclick = function(){
+    randomNum1 = Math.floor(Math.random() * max) + min;
+    randomNum2 = Math.floor(Math.random() * max) + min;
+    randomNum3 = Math.floor(Math.random() * max) + min;
+    label1.textContent = randomNum1;
+    label2.textContent = randomNum2;
+    label3.textContent = randomNum3;
+}
                 </pre>
             </section>
         </div>
@@ -70,6 +72,6 @@ function reset() {
     <footer>
         <p>So sit back, relax, and enjoy the show! | Theme: <span style="color: rgb(251, 255, 43); background-color: black;">Solid Yellow</span></p>
     </footer>
-    <script src="script/6. counter.js"></script>
+    <script src="script/8. random_num.js"></script>
 </body>
 </html>

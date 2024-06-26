@@ -1,0 +1,10 @@
+#roller label{
+    font-size: 5em;
+}
+#roller button {
+    padding: 10px 15px;
+    font-size: large;
+}
+#roller {
+    text-align: center;
+}
