@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+    <link rel="stylesheet" href="css/style_base.css">
+    <link rel="icon" type="image/jpeg" href="assets/jslogo.jpeg">
+</head>
+<body>
+    <nav>
+        <div class="nav-items">
+            <img src="assets/bro.png" alt="Bro Code">
+            <!--Nav title-->
+            <p>String Methods</p>
+        </div>
+        <div class="nav-items">
+            <a href="index.html"><button>Homepage</button></a>
+        </div>
+    </nav>
+    <main class="margin">
+        <div class="container">
+            <section>
+                <!--content title-->
+                <h1>String Methods</h1>
+                <hr>
+                <p>JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM). </p>
+            </section>
+            <section>
+                <h1>Main Content</h1>
+                <hr>
+            </section>
+            <section>
+                <h1>Scripts</h1>
+                <pre id="code">
+// String methods = allow you to manipulate and work with text (strings)
+// see the methods with adding dot after var string
+
+let username = "WingCatcher";
+let name = "Anjay Alok"
+console.log(username);
+console.log(`Using charAt 4 ==> ${username.charAt(4)}`);
+
+// index of the first occurence of E letter
+console.log(`Using indexOf e ==> ${username.indexOf("e")}`);
+
+// same but the last one
+console.log(`Using indexOf c ==> ${username.lastIndexOf("c")}`);
+
+// find the length of a string
+console.log(`The length of username is ==> ${username.length}`);
+
+// delete the whitespace using trim method
+console.log(`Before trim ==> ${name}`);
+console.log(`Name string after trim() ==> ${name.trim()}`);
+
+// making the string all uppercase or lowercase
+console.log(`Uppercased ==> ${username.toUpperCase()}`);
+console.log(`Lowercaased ==> ${name.toLowerCase()}`);
+
+// repeating the strings
+console.log(`Repeated by 6 times ==> ${username.repeat(6)}`);
+console.log(`Repeated by 4 times ==> ${name.repeat(4)}`);
+
+// starts with method
+console.log(`The output will be booleans (start/ends with)`)
+username = " Wingcatcher"
+let result = username.startsWith(" ");
+if (result){
+    console.log("Your name cannot start with whitespace.");
+}
+else {
+    console.log(username);
+}
+
+//same but the end of the string
+username = "Wingcatcher "
+result = username.endsWith(" ")
+if(result) {
+    console.log("Your last username cannot filled with empty or whitespace.")
+}
+else {
+    console.log(username);
+}
+
+// same but universal/include
+console.log("Include methods")
+username = "Wing Catcher";
+result = username.includes(" ");
+if (result){
+    console.log("Your username has white space.")
+}
+else{
+    console.log("Your usernmae has no whitespace")
+}
+
+// repalce method
+console.log("replace method")
+let phoneNumber = "123-123-123-123";
+result = phoneNumber.replaceAll("-", "");
+console.log(phoneNumber)
+console.log(`Your phone number after replaced ==> ${result}`);
+
+//padstart and padend method/ more like a fill
+console.log(phoneNumber.padStart(24, "X"));
+console.log(phoneNumber.padEnd(24, "W"));
+                </pre>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>So sit back, relax, and enjoy the show! | Theme: <span style="color: rgb(251, 255, 43); background-color: black;">Solid Yellow</span></p>
+    </footer>
+    <script src="script/13. string_methods.js"></script>
+</body>
+</html>

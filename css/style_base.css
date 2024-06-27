@@ -25,7 +25,8 @@ nav {
     font-size: 1.5em;
 }
 .nav-items img {
-    height: 80%;
+    width: 45px;
+    height: 45px;
     border-radius: 10px;
 }
 .nav-items button{

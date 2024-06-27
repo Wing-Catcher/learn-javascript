@@ -28,7 +28,8 @@ nav{
     font-weight: 550;
 }
 #logo-title img {
-    height: 80%;
+    width: 45px;
+    height: 45px;
     border-radius: 10px;
 }
 #buttons button {
