@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loops</title>
+    <link rel="stylesheet" href="css/style_base.css">
+    <link rel="icon" type="image/jpeg" href="assets/jslogo.jpeg">
+</head>
+<body>
+    <nav>
+        <div class="nav-items">
+            <img src="assets/bro.png" alt="Bro Code">
+            <!--Nav title-->
+            <p>For Loops</p>
+        </div>
+        <div class="nav-items">
+            <a href="index.html"><button>Homepage</button></a>
+        </div>
+    </nav>
+    <main class="margin">
+        <div class="container">
+            <section>
+                <!--content title-->
+                <h1>For Loops</h1>
+                <hr>
+                <p>JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM). </p>
+            </section>
+            <section>
+                <h1>Main Content</h1>
+                <hr>
+            </section>
+            <section>
+                <h1>Scripts</h1>
+                <pre id="code">
+// for loop = repeat some code a LIMITED amount of time
+// for loop = mengulang beberapa kode dalam jumlah waktu TERBATAS
+
+for(let i = 0; i <= 10; i++){
+    /*
+    Logika:
+    1. mendeklarasikan i / index
+    2. menyatakan kondisional apabila i kurang atau sama dengan 10
+    3. melanjutkan kondisional dengan menambahkan +1 pada i
+    */
+    console.log(`Hello this is the index ${i}`)
+}
+for (let x = 0; x <= 20; x++){
+    if (x == 13){
+        continue;
+        // skips the iterations
+    }
+    else if (x == 19){
+        break;
+        // exit the loop
+    }
+    else{
+        console.log(`The x: ${x}`)
+    }
+}
+                </pre>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>So sit back, relax, and enjoy the show! | Theme: <span style="color: rgb(251, 255, 43); background-color: black;">Solid Yellow</span></p>
+    </footer>
+    <script src="script/19. for_loops.js"></script>
+</body>
+</html>

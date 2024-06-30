@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strict Equality</title>
+    <link rel="stylesheet" href="css/style_base.css">
+    <link rel="icon" type="image/jpeg" href="assets/jslogo.jpeg">
+</head>
+<body>
+    <nav>
+        <div class="nav-items">
+            <img src="assets/bro.png" alt="Bro Code">
+            <!--Nav title-->
+            <p>Strict Equality</p>
+        </div>
+        <div class="nav-items">
+            <a href="index.html"><button>Homepage</button></a>
+        </div>
+    </nav>
+    <main class="margin">
+        <div class="container">
+            <section>
+                <!--content title-->
+                <h1>Strict Equality</h1>
+                <hr>
+                <p>JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM). </p>
+            </section>
+            <section>
+                <h1>Main Content</h1>
+                <hr>
+            </section>
+            <section>
+                <h1>Scripts</h1>
+                <pre id="code">
+// =    assignment operator
+// ==   comparison operator (compare if values and are equal)
+// ===  strict equality operator (compare if values and datatype are equal)
+// !=   inequality operator
+// !==  strict inequality operator
+
+// =    operator penugasan
+// ==   operator perbandingan (membandingkan apakah nilai-nilai tersebut sama)
+// ===  operator kesetaraan ketat (membandingkan apakah nilai-nilai dan tipe datanya sama)
+// !=   operator ketidaksetaraan
+// !==  operator ketidaksetaraan ketat
+
+const PI = 3.14;
+const PIE = "123";
+if (PI == "3.14"){
+    console.log("Compariosn Operator == True");
+}
+else if (PI === 3.14){
+    console.log("Strict Equality === True");
+}
+
+if (PIE !== 123){
+    console.log("That is not a PIE in number datatype");
+}
+else{
+    console.log("That is PIE");
+}
+                </pre>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>So sit back, relax, and enjoy the show! | Theme: <span style="color: rgb(251, 255, 43); background-color: black;">Solid Yellow</span></p>
+    </footer>
+    <script src="script/17. strict_equality.js"></script>
+</body>
+</html>

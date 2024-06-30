@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Loops</title>
+    <link rel="stylesheet" href="css/style_base.css">
+    <link rel="icon" type="image/jpeg" href="assets/jslogo.jpeg">
+</head>
+<body>
+    <nav>
+        <div class="nav-items">
+            <img src="assets/bro.png" alt="Bro Code">
+            <!--Nav title-->
+            <p>While Loops</p>
+        </div>
+        <div class="nav-items">
+            <a href="index.html"><button>Homepage</button></a>
+        </div>
+    </nav>
+    <main class="margin">
+        <div class="container">
+            <section>
+                <!--content title-->
+                <h1>While Loops</h1>
+                <hr>
+                <p>JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM). </p>
+            </section>
+            <section>
+                <h1>Main Content</h1>
+                <hr>
+            </section>
+            <section>
+                <h1>Scripts</h1>
+                <pre id="code">
+// while loop = repeat some code WHILE some condition is true
+// while loop = mengulang beberapa kode SELAMA kondisi tertentu benar
+
+// Danger: Infinite loops will crap out ur computer
+
+let userName = "";
+while(userName === "" || userName === null){
+    userName = window.prompt("Enter Your Username: ")
+    console.log("Enter Your name")
+}
+console.log(`Hello ${userName}`)
+
+// Do while loop (commented)
+/*
+
+userName = null;
+do{
+    userName = window.prompt("What is Your Username");
+    console.log("Enter your username");
+}while (userName === null)
+console.log(`Hello ${userName}`)
+
+*/
+
+let loggedIn = false;
+let user;
+let password;
+
+while(!loggedIn){
+    user = window.prompt("What is ur username? ");
+    password = window.prompt("Your Password");
+
+    if (user === "user" && password === "123"){
+        console.log("Access Granted")
+        loggedIn = true
+    }
+    else{
+        console.log("Access Denied")
+    }
+}
+                </pre>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>So sit back, relax, and enjoy the show! | Theme: <span style="color: rgb(251, 255, 43); background-color: black;">Solid Yellow</span></p>
+    </footer>
+    <script src="script/18. while_loops.js"></script>
+</body>
+</html>

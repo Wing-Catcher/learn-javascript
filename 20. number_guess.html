@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link rel="stylesheet" href="css/style_base.css">
+    <link rel="icon" type="image/jpeg" href="assets/jslogo.jpeg">
+</head>
+<body>
+    <nav>
+        <div class="nav-items">
+            <img src="assets/bro.png" alt="Bro Code">
+            <!--Nav title-->
+            <p>Title</p>
+        </div>
+        <div class="nav-items">
+            <a href="index.html"><button>Homepage</button></a>
+        </div>
+    </nav>
+    <main class="margin">
+        <div class="container">
+            <section>
+                <!--content title-->
+                <h1>console.log("hello world")</h1>
+                <hr>
+                <p>JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM). </p>
+            </section>
+            <section>
+                <h1>Main Content</h1>
+                <hr>
+                <h2></h2>
+            </section>
+            <section>
+                <h1>Scripts</h1>
+                <pre id="code">
+const min = 1
+const max = 10
+const answer = Math.round(Math.random() * (max - min + 1)) + min;
+console.log(answer)
+
+let attempts = 0;
+let guess;
+let running = true;
+
+while (running){
+    guess = window.prompt(`Guess the number between ${min} to ${max}:`)
+    guess = Number(guess)
+    if(isNaN(guess)){
+        window.alert("Please input a valid number")
+    }
+    else if(guess < min || guess > max){
+        window.alert("Please enter a valid number (Too much or too little)")
+    }
+    else{
+        attempts++;
+        if (guess < answer){
+            window.alert("Too low, try again")
+        }
+        else if(guess > answer){
+            window.alert("Too high, try again.")
+        }
+        else{
+            window.alert(`Correct, the answer ${answer}`)
+            window.alert(`attempts = ${attempts}`)
+            running = false;
+        }
+    }
+}
+
+                </pre>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>So sit back, relax, and enjoy the show! | Theme: <span style="color: rgb(251, 255, 43); background-color: black;">Solid Yellow</span></p>
+    </footer>
+    <script src="script/20. number_guess.js"></script>
+</body>
+</html>
