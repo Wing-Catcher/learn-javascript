@@ -1,0 +1,16 @@
+#box{
+    text-align: center;
+}
+#input{
+    height: 40px;
+    border-radius: 10px;
+    width: 200px;
+    font-size: 1.1em;
+    padding-left: 10px;
+}
+#submit{
+    padding: 5px;
+}
+#result{
+    padding: 5px;
+}

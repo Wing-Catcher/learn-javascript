@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+    <link rel="stylesheet" href="css/style_base.css">
+    <link rel="icon" type="image/jpeg" href="assets/jslogo.jpeg">
+</head>
+<body>
+    <nav>
+        <div class="nav-items">
+            <img src="assets/bro.png" alt="Bro Code">
+            <!--Nav title-->
+            <p>Functions</p>
+        </div>
+        <div class="nav-items">
+            <a href="index.html"><button>Functions</button></a>
+        </div>
+    </nav>
+    <main class="margin">
+        <div class="container">
+            <section>
+                <!--content title-->
+                <h1>Functions</h1>
+                <hr>
+                <p>JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM). </p>
+            </section>
+            <section>
+                <h1>Main Content</h1>
+                <hr>
+            </section>
+            <section>
+                <h1>Scripts</h1>
+                <pre id="code">
+// function =   A section of reusable code.
+//              declare code once, use it whenever you want
+//              call the function to execute the code
+
+function happyBirthday(){
+    console.log("Happy birthday to you");
+    console.log("Happy birthday to you");
+    console.log("Happy birthday to you");
+}
+function tellAge(name, age){
+    console.log(`hello ${name}`)
+    console.log(`You are ${age} years old.`)
+}
+tellAge("Brocode" , 34);
+tellAge("spongebob" , 99);
+tellAge("Patrick", 44)
+
+function addNumber (x, y){
+    return x + y
+}
+function substractNumber(x, y){
+    return x - y
+}
+function multiply (x, y){
+    return x * y
+}
+function divide (x, y){
+    return x / y
+}
+function evenNumber(number){
+    if (number % 2 === 0){
+        return true
+    }
+    else{
+        return false
+    }
+}
+function isvalidEmail(email){
+    return email.includes('@') ? true:false
+    // ternary operator
+}
+
+console.log(addNumber(23, 44))
+console.log(substractNumber(23, 44))
+console.log(multiply(23, 44))
+console.log(divide(23, 44))
+console.log(evenNumber(30))
+console.log(isvalidEmail("hehehehe@gmail.fuck"))
+                </pre>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>So sit back, relax, and enjoy the show! | Theme: <span style="color: rgb(251, 255, 43); background-color: black;">Solid Yellow</span></p>
+    </footer>
+    <script src="script/21. functions.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="css/style_base.css">
+    <link rel="stylesheet" href="css/24. temperature_converter.css">
+    <link rel="icon" type="image/jpeg" href="assets/jslogo.jpeg">
+</head>
+<body>
+    <nav>
+        <div class="nav-items">
+            <img src="assets/bro.png" alt="Bro Code">
+            <!--Nav title-->
+            <p>Temperature Converter</p>
+        </div>
+        <div class="nav-items">
+            <a href="index.html"><button>Homepage</button></a>
+        </div>
+    </nav>
+    <main class="margin">
+        <div class="container">
+            <section>
+                <!--content title-->
+                <h1>Temperature Converter</h1>
+                <hr>
+                <p>JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM). </p>
+            </section>
+            <section>
+                <h1>Main Content</h1>
+                <hr>
+                <p>Lets try to figure out this thing again by myself</p>
+
+                <div id="box">
+                    <h3>Converter</h3>
+                    <p>Converts celcius to fahrenheit and vice versa</p>
+                    <p>Simple mode, see the advanced version at my repo</p>
+                    <input type="text" id="input" placeholder="Temperature"><br><br>
+                    <input type="radio" name="option" id="toFahrenheit">
+                    <label for="toFahrenheit">Celcius to Fahrenheit</label><br>
+                    <input type="radio" name="option" id="toCelcius">
+                    <label for="toCelcius">Fahrenheit to Celcius</label><br><br>
+                    <button type="submit" id="submit" onclick="submit()">Calculate!</button>
+                    <input type="text" id="result" placeholder="Result" readonly>
+                </div>
+                
+            </section>
+            <section>
+                <h1>Scripts</h1>
+                <pre id="code">
+hello world
+                </pre>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>So sit back, relax, and enjoy the show! | Theme: <span style="color: rgb(251, 255, 43); background-color: black;">Solid Yellow</span></p>
+    </footer>
+    <script src="script/24. temperature_converter.js"></script>
+</body>
+</html>

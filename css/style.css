@@ -68,6 +68,7 @@ section{
 }
 
 #links button {
+    width: 100%;
     height: 40px;
     font-family: monospace;
     font-size: 1.2em;
