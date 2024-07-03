@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array</title>
-    <link rel="stylesheet" href="css/style_base.css">
-    <link rel="icon" type="image/jpeg" href="assets/jslogo.jpeg">
+    <title>String Slicing</title>
+    <link rel="stylesheet" href="/css/style_base.css">
+    <link rel="icon" type="image/jpeg" href="/assets/jslogo.jpeg">
 </head>
 <body>
     <nav>
         <div class="nav-items">
-            <img src="assets/bro.png" alt="Bro Code">
+            <img src="/assets/bro.png" alt="Bro Code">
             <!--Nav title-->
-            <p>Array</p>
+            <p>String Slicing</p>
         </div>
         <div class="nav-items">
-            <a href="index.html"><button>Homepage</button></a>
+            <a href="/index.html"><button>Homepage</button></a>
         </div>
     </nav>
     <main class="margin">
         <div class="container">
             <section>
                 <!--content title-->
-                <h1>Array</h1>
+                <h1>String Slicing</h1>
                 <hr>
                 <p>JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM). </p>
             </section>
@@ -33,45 +33,35 @@
             <section>
                 <h1>Scripts</h1>
                 <pre id="code">
-// array = a variable like structure that can hold more
-//         than one value
+/*
+String slicing = creating substring from a portion of
+                anothrt string
+                string.slice(start, end)
+*/
+let fullName = "Wing Catcher"
+let firstname = fullName.slice(0, 4);
+let lastName = fullName.slice(5, 12);
+let firstChar = fullName.slice(0, 1);
+let lastChar = fullName.slice(-1);
+console.log(firstname);
+console.log(lastName);
+console.log(`The first char ${firstChar}`);
+console.log(`The last char ${lastChar}`);
 
-let fruits = ["apple 0", "orange 1", "banana 2"];
+// The more dynamic way to do it
+fullName = "Star Catcher";
+firstname = fullName.slice(0, fullName.indexOf(" "));
+// the space will be included if we dont add +1
+lastName = fullName.slice(fullName.indexOf(" ") + 1);
+console.log(firstname);
+console.log(lastName);
 
-// insert a value to array
-fruits[0] = "coconut"
-fruits.push("coconut")
-
-// pop out the way the last value of array
-fruits.pop()
-
-// against of push method
-fruits.unshift("mangos")
-
-console.log(fruits[0])
-console.log(fruits[1])
-console.log(fruits[2])
-
-let numOfFruits = fruits.length
-console.log(numOfFruits);
-
-// search for the location of value array
-let index = fruits.indexOf("coconut")
-console.log(index)
-
-for (let i = 0; i < fruits.length; i++){
-    console.log(fruits[i])
-}
-// loops for print in backward
-for (let i = fruits.length - 1; i >=0; i--){
-    console.log(fruits[i])
-}
-
-fruits.sort().reverse()
-
-for (let fruit of fruits){
-    console.log(fruit)
-}
+// exercise yoo
+const email = "starcatcher@gmail.com";
+const userName = email.slice(0, email.indexOf("@"));
+const domain = email.slice(email.indexOf("@") + 1);
+console.log(`Your Username is ${userName}`);
+console.log(`Your domain is ${domain}`);
                 </pre>
             </section>
         </div>
@@ -79,6 +69,6 @@ for (let fruit of fruits){
     <footer>
         <p>So sit back, relax, and enjoy the show! | Theme: <span style="color: rgb(251, 255, 43); background-color: black;">Solid Yellow</span></p>
     </footer>
-    <script src="script/23. array.js"></script>
+    <script src="/script/14. string_slicing.js"></script>
 </body>
 </html>

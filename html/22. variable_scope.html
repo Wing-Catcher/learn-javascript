@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>While Loops</title>
-    <link rel="stylesheet" href="css/style_base.css">
-    <link rel="icon" type="image/jpeg" href="assets/jslogo.jpeg">
+    <title>Variable Scope</title>
+    <link rel="stylesheet" href="/css/style_base.css">
+    <link rel="icon" type="image/jpeg" href="/assets/jslogo.jpeg">
 </head>
 <body>
     <nav>
         <div class="nav-items">
-            <img src="assets/bro.png" alt="Bro Code">
+            <img src="/assets/bro.png" alt="Bro Code">
             <!--Nav title-->
-            <p>While Loops</p>
+            <p>Variable Scope</p>
         </div>
         <div class="nav-items">
-            <a href="index.html"><button>Homepage</button></a>
+            <a href="/index.html"><button>Homepage</button></a>
         </div>
     </nav>
     <main class="margin">
         <div class="container">
             <section>
                 <!--content title-->
-                <h1>While Loops</h1>
+                <h1>Variable Scope</h1>
                 <hr>
                 <p>JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM). </p>
             </section>
@@ -33,45 +33,24 @@
             <section>
                 <h1>Scripts</h1>
                 <pre id="code">
-// while loop = repeat some code WHILE some condition is true
-// while loop = mengulang beberapa kode SELAMA kondisi tertentu benar
-
-// Danger: Infinite loops will crap out ur computer
-
-let userName = "";
-while(userName === "" || userName === null){
-    userName = window.prompt("Enter Your Username: ")
-    console.log("Enter Your name")
-}
-console.log(`Hello ${userName}`)
-
-// Do while loop (commented)
 /*
-
-userName = null;
-do{
-    userName = window.prompt("What is Your Username");
-    console.log("Enter your username");
-}while (userName === null)
-console.log(`Hello ${userName}`)
-
+Variable scope = where a variable is recognize and accessible
+                 (local vs global)
+                 think like inside and outside
 */
 
-let loggedIn = false;
-let user;
-let password;
+// it is good to use local scoope in main program (large)
+// and its okay with global scope on lil programs
 
-while(!loggedIn){
-    user = window.prompt("What is ur username? ");
-    password = window.prompt("Your Password");
-
-    if (user === "user" && password === "123"){
-        console.log("Access Granted")
-        loggedIn = true
-    }
-    else{
-        console.log("Access Denied")
-    }
+//in here is global
+function fungsi1(){
+    // this is local scope
+    let x = 1;
+    console.log(x)
+}
+function fungsi2(){
+    let x = 4;
+    console.log(x)
 }
                 </pre>
             </section>
@@ -80,6 +59,6 @@ while(!loggedIn){
     <footer>
         <p>So sit back, relax, and enjoy the show! | Theme: <span style="color: rgb(251, 255, 43); background-color: black;">Solid Yellow</span></p>
     </footer>
-    <script src="script/18. while_loops.js"></script>
+    <script src="/script/22. variable_scope.js"></script>
 </body>
 </html>

@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strict Equality</title>
-    <link rel="stylesheet" href="css/style_base.css">
-    <link rel="icon" type="image/jpeg" href="assets/jslogo.jpeg">
+    <title>Logical Operator</title>
+    <link rel="stylesheet" href="/css/style_base.css">
+    <link rel="icon" type="image/jpeg" href="/assets/jslogo.jpeg">
 </head>
 <body>
     <nav>
         <div class="nav-items">
-            <img src="assets/bro.png" alt="Bro Code">
+            <img src="/assets/bro.png" alt="Bro Code">
             <!--Nav title-->
-            <p>Strict Equality</p>
+            <p>Logical Operator</p>
         </div>
         <div class="nav-items">
-            <a href="index.html"><button>Homepage</button></a>
+            <a href="/index.html"><button>Homepage</button></a>
         </div>
     </nav>
     <main class="margin">
         <div class="container">
             <section>
                 <!--content title-->
-                <h1>Strict Equality</h1>
+                <h1>Logical Operator</h1>
                 <hr>
                 <p>JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM). </p>
             </section>
@@ -33,32 +33,36 @@
             <section>
                 <h1>Scripts</h1>
                 <pre id="code">
-// =    assignment operator
-// ==   comparison operator (compare if values and are equal)
-// ===  strict equality operator (compare if values and datatype are equal)
-// !=   inequality operator
-// !==  strict inequality operator
-
-// =    operator penugasan
-// ==   operator perbandingan (membandingkan apakah nilai-nilai tersebut sama)
-// ===  operator kesetaraan ketat (membandingkan apakah nilai-nilai dan tipe datanya sama)
-// !=   operator ketidaksetaraan
-// !==  operator ketidaksetaraan ketat
-
-const PI = 3.14;
-const PIE = "123";
-if (PI == "3.14"){
-    console.log("Compariosn Operator == True");
-}
-else if (PI === 3.14){
-    console.log("Strict Equality === True");
-}
-
-if (PIE !== 123){
-    console.log("That is not a PIE in number datatype");
+/*
+Logical operator    =   used to continue or manipulate boolean values
+                        (true) or (false)
+                        AND     &&
+                        OR      ||
+                        NOT     !
+*/
+const temp = window.prompt("Enter value");
+console.log("--- Below are using and operator && ---")
+if (temp >= 0 && temp < 41){
+    console.log("The weather is good")
 }
 else{
-    console.log("That is PIE");
+    console.log("The weather is bad")
+}
+console.log("--- Below are using or operator ---")
+if (temp <= 30 || temp < 0){
+    console.log("The weather is too cold")
+}
+else{
+    console.log("The weather is normal or too hot")
+}
+
+console.log("--- Below are using not operator ---")
+const isSunny = true;
+if (!isSunny){
+    console.log("It Is Sunny")
+}
+else{
+    console.log("Its not sunny")
 }
                 </pre>
             </section>
@@ -67,6 +71,6 @@ else{
     <footer>
         <p>So sit back, relax, and enjoy the show! | Theme: <span style="color: rgb(251, 255, 43); background-color: black;">Solid Yellow</span></p>
     </footer>
-    <script src="script/17. strict_equality.js"></script>
+    <script src="/script/16. logical_operator.js"></script>
 </body>
 </html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <link rel="stylesheet" href="/css/style_base.css">
+    <link rel="icon" type="image/jpeg" href="/assets/jslogo.jpeg">
+</head>
+<body>
+    <nav>
+        <div class="nav-items">
+            <img src="/assets/bro.png" alt="Bro Code">
+            <!--Nav title-->
+            <p>Array</p>
+        </div>
+        <div class="nav-items">
+            <a href="/index.html"><button>Homepage</button></a>
+        </div>
+    </nav>
+    <main class="margin">
+        <div class="container">
+            <section>
+                <!--content title-->
+                <h1>Array</h1>
+                <hr>
+                <p>JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM). </p>
+            </section>
+            <section>
+                <h1>Main Content</h1>
+                <hr>
+            </section>
+            <section>
+                <h1>Scripts</h1>
+                <pre id="code">
+// array = a variable like structure that can hold more
+//         than one value
+
+let fruits = ["apple 0", "orange 1", "banana 2"];
+
+// insert a value to array
+fruits[0] = "coconut"
+fruits.push("coconut")
+
+// pop out the way the last value of array
+fruits.pop()
+
+// against of push method
+fruits.unshift("mangos")
+
+console.log(fruits[0])
+console.log(fruits[1])
+console.log(fruits[2])
+
+let numOfFruits = fruits.length
+console.log(numOfFruits);
+
+// search for the location of value array
+let index = fruits.indexOf("coconut")
+console.log(index)
+
+for (let i = 0; i < fruits.length; i++){
+    console.log(fruits[i])
+}
+// loops for print in backward
+for (let i = fruits.length - 1; i >=0; i--){
+    console.log(fruits[i])
+}
+
+fruits.sort().reverse()
+
+for (let fruit of fruits){
+    console.log(fruit)
+}
+                </pre>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>So sit back, relax, and enjoy the show! | Theme: <span style="color: rgb(251, 255, 43); background-color: black;">Solid Yellow</span></p>
+    </footer>
+    <script src="/script/23. array.js"></script>
+</body>
+</html>

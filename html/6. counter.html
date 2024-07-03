@@ -3,26 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Method Chaining</title>
-    <link rel="stylesheet" href="css/style_base.css">
-    <link rel="icon" type="image/jpeg" href="assets/jslogo.jpeg">
+    <title>Counter</title>
+    <link rel="stylesheet" href="/css/style_base.css">
+    <link rel="stylesheet" href="/css/6. counter.css">
+    <link rel="icon" type="image/jpeg" href="/assets/jslogo.jpeg">
 </head>
 <body>
     <nav>
         <div class="nav-items">
-            <img src="assets/bro.png" alt="Bro Code">
+            <img src="/assets/bro.png" alt="Bro Code">
             <!--Nav title-->
-            <p>Method Chaining</p>
+            <p>Counter</p>
         </div>
         <div class="nav-items">
-            <a href="index.html"><button>Homepage</button></a>
+            <a href="/index.html"><button>Homepage</button></a>
         </div>
     </nav>
     <main class="margin">
         <div class="container">
             <section>
                 <!--content title-->
-                <h1>Method Chaining</h1>
+                <h1>Counter in website</h1>
                 <hr>
                 <p>JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM). </p>
             </section>
@@ -31,28 +32,37 @@
                 <hr>
             </section>
             <section>
+                <label id="countLabel">0</label><br>
+                <div id="btnContainer">
+                    <button onclick="decrease()" class="buttons" id="decreaseBtn">Decrease</button>
+                    <button onclick="reset()" class="buttons" id="resetBtn">Reset</button>
+                    <button onclick="increase()" class="buttons" id="increaseBtn">Increase</button>
+                </div>
+            </section>
+            <section>
                 <h1>Scripts</h1>
                 <pre id="code">
-// Method Chaining  =   Calling one method after another
-//                      in one continuous line of code
+// Counter program
 
-// --- NO METHOD CHAINING ---
+const decreaseBtn = document.getElementById("decreaseBtn");
+const resetBtn = document.getElementById("resetBtn");
+const increaseBtn = document.getElementById("increaseBtn");
+const countLabel = document.getElementById("countLabel");
+let count = 0;
 
-let username = window.prompt("Enter ur username");
+function decrease() {
+    count--;
+    countLabel.textContent = count;
+}
+function increase(){
+    count++;
+    countLabel.textContent = count;
+}
+function reset() {
+    count = 0
+    countLabel.textContent = count;
+}
 
-username = username.trim();
-let firstChar = username.charAt(0);
-firstChar = firstChar.toUpperCase();
-let extras = username.slice(1);
-extras = extras.toLowerCase()
-username = firstChar + extras;
-
-console.log (username)
-
-// --- METHOD CHAINING (Programming technique) ---
-let fullName = window.prompt("What is your fullname: ");
-fullName = fullName.trim().charAt(0).toUpperCase() + fullName.trim().slice(1).toLowerCase();
-console.log(fullName);
                 </pre>
             </section>
         </div>
@@ -60,6 +70,6 @@ console.log(fullName);
     <footer>
         <p>So sit back, relax, and enjoy the show! | Theme: <span style="color: rgb(251, 255, 43); background-color: black;">Solid Yellow</span></p>
     </footer>
-    <script src="script/15. method_chaining.js"></script>
+    <script src="/script/6. counter.js"></script>
 </body>
 </html>

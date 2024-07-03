@@ -3,57 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>If statements</title>
-    <link rel="stylesheet" href="css/style_base.css">
-    <link rel="icon" type="image/jpeg" href="assets/jslogo.jpeg">
+    <title>Datatypes</title>
+    <link rel="stylesheet" href="/css/style_base.css">
+    <link rel="icon" type="image/jpeg" href="/assets/jslogo.jpeg">
 </head>
 <body>
     <nav>
         <div class="nav-items">
-            <img src="assets/bro.png" alt="Bro Code">
-            <!--Nav title-->
-            <p>If statements</p>
+            <img src="/assets/bro.png" alt="Bro Code">
+            <p>convert datatype</p>
         </div>
         <div class="nav-items">
-            <a href="index.html"><button>Homepage</button></a>
+            <a href="/index.html"><button>Homepage</button></a>
         </div>
     </nav>
     <main class="margin">
         <div class="container">
             <section>
-                <!--content title-->
-                <h1>If else ifelse</h1>
+                <h1>Number()</h1>
                 <hr>
                 <p>JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM). </p>
             </section>
             <section>
                 <h1>Main Content</h1>
                 <hr>
-                <label for=""></label>
-                <input id="myNum" type="number">
-                <button type="submit" id="submit" onclick="seeResult()">Submit</button>
-                <p id="result"></p>
             </section>
             <section>
                 <h1>Scripts</h1>
                 <pre id="code">
-// put the decaration inside of the function since you want
-// to make it update able
+/*
+type conversion = change datatype of a value to another
+(strings, number, booleans)
 
-function seeResult(){
-    let age = document.getElementById("myNum").value
-    const mySubmit = document.getElementById("submit")
-    const result = document.getElementById('result')
-    if (age >= 18){
-        result.textContent = `Hello you may enter this site, since you are ${age}`
-    }
-    else if(age < 18){
-        result.textContent = `You cannot enter this site, since you are ${age}`
-    }
-    else{
-        result.textContent = "You are banned"
-    }
-}
+let age;
+age = window.prompt("How old are you");
+age = Number(age)
+age += 1;
+console.log(age, typeof age)
+*/
+
+let x = "pizza";
+let y = "pizza";
+let z = "";
+
+x = Number(x);
+y = String(y);
+z = Boolean (z);
+
+// NaN not a number
+// false for nothing in string
+
+console.log(x, typeof x);
+console.log(y, typeof y);
+console.log(z, typeof z);
                 </pre>
             </section>
         </div>
@@ -61,6 +63,6 @@ function seeResult(){
     <footer>
         <p>So sit back, relax, and enjoy the show! | Theme: <span style="color: rgb(251, 255, 43); background-color: black;">Solid Yellow</span></p>
     </footer>
-    <script src="script/9. if_statements.js"></script>
+    <script src="/script/4. convert_datatype.js"></script>
 </body>
 </html>
