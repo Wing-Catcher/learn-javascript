@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Parameter</title>
+    <link rel="stylesheet" href="/css/style_base.css">
+    <link rel="icon" type="image/jpeg" href="/assets/jslogo.jpeg">
+</head>
+<body>
+    <nav>
+        <div class="nav-items">
+            <img src="/assets/bro.png" alt="Bro Code">
+            <!--Nav title-->
+            <p>Rest Parameter</p>
+        </div>
+        <div class="nav-items">
+            <a href="/index.html"><button>Homepage</button></a>
+        </div>
+    </nav>
+    <main class="margin">
+        <div class="container">
+            <section>
+                <!--content title-->
+                <h1>Rest Parameter</h1>
+                <hr>
+                <p>JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM). </p>
+            </section>
+            <section>
+                <h1>Main Content</h1>
+                <hr>
+            </section>
+            <section>
+                <h1>Scripts</h1>
+                <pre id="code">
+/*
+rest parameters = (...rest) allow a function work wiwth a variable number of
+                    arguments by bundling them into an array
+
+                    spread = expands an array into seperate elemnets
+                    rest = bundles seperate elements into an array
+                    more like it does the opposite
+*/
+
+function openFridge(...foods){
+    // accepts any numbers of arguments
+    console.log(`in array: ${foods}`)
+    console.log(...foods)
+}
+
+const food1 = "pizza";
+const food2 = "soto";
+const food3 = "bakwan";
+const food4 = "nasi goreng";
+
+openFridge(food1, food2, food3, food4)
+/*
+    Logic   =   openFridge function will output the array of 
+                food1~food4 combined
+
+    output  =   Array(4) [ "pizza", "soto", "bakwan", "nasi goreng" ]
+*/
+
+// Variation 2
+console.log("This is drinks");
+function getDrinks(...drinks){
+    return drinks
+}
+
+const drink1 = "orange juice";
+const drink2 = "apple juice";
+const drink3 = "mango juice";
+const drink4 = "milk";
+
+allDrinks = getDrinks(drink1, drink2, drink3, drink4);
+console.log(allDrinks);
+
+// advanced using for loops
+console.log("Advanced: with for loop");
+function combineStrings(...names){
+    return names.join(" ")
+    // add " " to seperate all the names combined
+}
+const allname = combineStrings("Raffy", "Ahmad", "Jaylani");
+console.log(allname);
+                </pre>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>So sit back, relax, and enjoy the show! | Theme: <span style="color: rgb(251, 255, 43); background-color: black;">Solid Yellow</span></p>
+    </footer>
+    <script src="/script/26. rest_parameter.js"></script>
+</body>
+</html>
