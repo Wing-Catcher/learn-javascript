@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller</title>
+    <link rel="stylesheet" href="/css/style_base.css">
+    <link rel="stylesheet" href="/css/27. dice_roller.css">
+    <link rel="icon" type="image/jpeg" href="/assets/jslogo.jpeg">
+</head>
+<body>
+    <nav>
+        <div class="nav-items">
+            <img src="/assets/bro.png" alt="Bro Code">
+            <!--Nav title-->
+            <p>Dice Roller</p>
+        </div>
+        <div class="nav-items">
+            <a href="/index.html"><button>Homepage</button></a>
+        </div>
+    </nav>
+    <main class="margin">
+        <div class="container">
+            <section>
+                <!--content title-->
+                <h1>Do not use it for illegal use</h1>
+                <hr>
+                <p>JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM). </p>
+            </section>
+            <section id="main">
+
+                <div id="conatainer2">
+                    <h1>Dice Roller</h1>
+                    <label for="">Number of dice</label>
+                    <input type="number" id="numOfDice" value="1" min="1">
+                    <button onclick="rollDice()" id="roller">Roll Dice</button>
+                    <div id="diceResult"></div>
+                    <div id="diceImages"></div>
+                </div>
+                
+            </section>
+            <section>
+                <h1>Scripts</h1>
+                <pre id="code">
+function rollDice(){
+    const numOfDice = document.getElementById("numOfDice").value;
+    const diceResult = document.getElementById("diceResult");
+    const diceImages = document.getElementById("diceImages");
+    const values = [];
+    const images = [];
+
+    for(let i = 0; i < numOfDice; i++){
+
+        // logic: jika i lebih kecil dari jumlah dadu
+        // maka tambahkan i, setiap penambahan i, sebuah
+        // bilangan acak 1 ~ 6 dibuat
+
+        const value = Math.floor(Math.random() * 6) + 1;
+        values.push(value)
+        images.push( CHECK JS TO LEARN MORE );
+    }
+    diceResult.textContent = `Dice: ${values.join(`, `)}`;
+    diceImages.innerHTML = images.join("");
+
+    // for consoles
+    console.log(values)
+}
+                </pre>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>So sit back, relax, and enjoy the show! | Theme: <span style="color: rgb(251, 255, 43); background-color: black;">Solid Yellow</span></p>
+    </footer>
+    <script src="/script/27. dice_roller.js"></script>
+</body>
+</html>
