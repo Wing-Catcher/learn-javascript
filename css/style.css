@@ -92,11 +92,26 @@ textarea{
 footer{
     display: flex;
     align-items: center;
+    gap: 30px;
     height: 60px;
     background-color: bisque;
     justify-content: center;
-}
-footer p{
-    color: rgb(20,20,20);
-    font-size: 1.2em
+    align-items: center;
+
+    button{
+        padding: 5px 15px;
+        transition: all 0.2s;
+        border: none;
+        background-color: rgb(41, 41, 41);
+        border-radius: 10px;
+        color: aliceblue;
+    }
+    button:hover{
+        transform: translateY(-3px);
+    }
+
+    p{
+        color: rgb(20,20,20);
+        font-size: 1.2em
+    }
 }
