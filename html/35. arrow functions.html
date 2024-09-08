@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow function</title>
+    <link rel="stylesheet" href="/css/style_base.css">
+    <link rel="icon" type="image/jpeg" href="/assets/jslogo.jpeg">
+</head>
+<body>
+    <nav>
+        <div class="nav-items">
+            <img src="/assets/bro.png" alt="Bro Code">
+            <!--Nav title-->
+            <p>Arrow function</p>
+        </div>
+        <div class="nav-items">
+            <a href="/index.html"><button>Homepage</button></a>
+        </div>
+    </nav>
+    <main class="margin">
+        <div class="container">
+            <section>
+                <!--content title-->
+                <h1>console.log("hello world")</h1>
+                <hr>
+                <p>JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM). </p>
+            </section>
+            <section>
+                <h1>Main Content</h1>
+                <hr>
+            </section>
+            <section>
+                <h1>Scripts</h1>
+                <pre id="code">
+/*
+arrow function = a concise way to write function expressions
+                 good for simple function that you use only once
+                 (parameters) => some code
+
+arrow function = cara ringkas untuk menulis ekspresi fungsi
+                 bagus untuk fungsi sederhana yang hanya digunakan sekali
+                 (parameter) => beberapa kode
+*/
+
+// usual function
+function hello(){
+    console.log(`hello() Hello world`);
+}
+
+// or
+const hi = function(){
+    console.log(`Hello world`);
+}
+
+//here's the thing
+const greeting = (name, age) => {
+    console.log(`Good evening ${name}`);
+    console.log(`Your age is ${age} old.`);
+}
+greeting("jono", "34")
+
+// with set timeout
+setTimeout(() => {
+    console.log("Hello world")
+}, 3000);
+
+let numbers = [10, 20, 30, 40, 50];
+const squares = numbers.map((element) => Math.pow(element, 2));
+const cubed = numbers.map((element) => Math.pow(element, 3));
+console.log(squares)
+console.log(cubed)
+/*
+.map() = accpets a callback and applies that function to
+        each element of an array, then return a new array
+*/
+
+const maximum = numbers.reduce((accumulator, element) => Math.max(accumulator, element))
+const minimum = numbers.reduce((accumulator, element) => Math.min(accumulator, element))
+console.log(maximum)
+console.log(minimum)
+/*
+.reduce = reduce the elements of an array
+          to a single value
+*/
+
+let sentences = ["hello", "indonesia", "Trenggalek", "dani"]
+const thanFive = sentences.filter((element) => element.length > 5);
+const belowSeven = sentences.filter((element)=> element.length < 7);
+console.log(thanFive);
+console.log(belowSeven);
+                </pre>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>So sit back, relax, and enjoy the show! | Theme: <span style="color: rgb(251, 255, 43); background-color: black;">Solid Yellow</span></p>
+    </footer>
+    <script src="/script/35. arrow functions.js"></script>
+</body>
+</html>

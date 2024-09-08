@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor</title>
+    <link rel="stylesheet" href="/css/style_base.css">
+    <link rel="icon" type="image/jpeg" href="/assets/jslogo.jpeg">
+</head>
+<body>
+    <nav>
+        <div class="nav-items">
+            <img src="/assets/bro.png" alt="Bro Code">
+            <!--Nav title-->
+            <p>Constructor</p>
+        </div>
+        <div class="nav-items">
+            <a href="/index.html"><button>Homepage</button></a>
+        </div>
+    </nav>
+    <main class="margin">
+        <div class="container">
+            <section>
+                <!--content title-->
+                <h1>Wanna make an object from "new"?</h1>
+                <hr>
+                <p>JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM). </p>
+            </section>
+            <section>
+                <h1>Main Content</h1>
+                <hr>
+            </section>
+            <section>
+                <h1>Scripts</h1>
+                <pre id="code">
+/*
+constructor = special method for defining the properties
+              and methods of objects
+
+konstruktor = metode khusus untuk mendefinisikan properti
+              dan metode objek
+*/
+
+function Car(brand, model, year, color){
+    this.brand = brand,
+    this.model = model,
+    this.year = year,
+    this.color = color,
+    // lets add a method
+    this.drive = function(){
+        console.log(`You drive a ${this.model}`)
+    }
+}
+const car1 = new Car("Toyota", "Supra", 2017, "Red");
+const car2 = new Car("BMW", "M5", 2024, "Blue");
+
+console.log(car1.brand);
+console.log(car1.model);
+console.log(car1.year);
+console.log(car1.color);
+car1.drive();
+
+console.log(car2.brand);
+console.log(car2.model);
+console.log(car2.year);
+console.log(car2.color);
+car2.drive();
+                </pre>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>So sit back, relax, and enjoy the show! | Theme: <span style="color: rgb(251, 255, 43); background-color: black;">Solid Yellow</span></p>
+    </footer>
+    <script src="/script/38. constructor.js"></script>
+</body>
+</html>
