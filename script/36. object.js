@@ -1,5 +1,4 @@
 /*
-
 Object = A collection of related properties and/or methods
          Can represent real world objects (people, products, places)
          Object = {key: value,
@@ -9,15 +8,7 @@ Objek = Kumpulan properti dan/atau metode yang terkait
         Dapat mewakili objek dunia nyata (orang, produk, tempat)
         Objek = {kunci: nilai,
                  fungsi()}
-
 */
-
-const ayah = {
-    firstName: "Bapak",
-    lastName: "Suryanto",
-    age: 40,
-    isEmployed: true,
-}
 
 const spongebob = {
     firstName: "Spongebob",
@@ -29,9 +20,8 @@ const spongebob = {
     }
 }
 
-console.log(ayah.firstName);
-console.log(ayah.lastName);
-console.log(ayah.age);
-console.log(ayah.isEmployed);
-
+console.log(spongebob.firstName);
+console.log(spongebob.lastName);
+console.log(spongebob.age);
+console.log(spongebob.isEmployed);
 spongebob.sayHello()
