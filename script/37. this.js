@@ -19,6 +19,14 @@ const spongebob = {
     }
 }
 
+const marcel = {
+    nama: "Marcel",
+    nama_lengkap: "Marcel Dita Nugraha",
+    sayName: function(){
+        console.log(this.nama_lengkap)
+    },
+}
+marcel.sayName()
 spongebob.sayHello()
 spongebob.sayAgain()
 

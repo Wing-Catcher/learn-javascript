@@ -33,3 +33,27 @@ product2.displayProduct()
 console.log(`The price is: $${product2.calculateTotal(salesTax)}`)
 product3.displayProduct()
 console.log(`The price is: $${product3.calculateTotal(salesTax)}`)
+
+class dataOrang{
+    constructor(nama, alamat, pekerjaan){
+        this.nama = nama,
+        this.alamat = alamat,
+        this.pekerjaan = pekerjaan
+    }
+    tampilkanData(){
+        console.log("=== === === === === ===")
+        console.log(`Namaku adalah: ${this.nama}`)
+        console.log(`Alamat saya di ${this.alamat}`)
+        console.log(`Pekerjaan saya adalah ${this.pekerjaan}`)
+    }
+}
+
+let doni = new dataOrang(
+    window.prompt("Who are You?"),
+    window.prompt("Where is your address?"),
+    window.prompt("What is your occupation?")
+);
+let yanto = new dataOrang("Yanto", "Sambirejo", "Pelajar SMA");
+let dewi = new dataOrang("Dewi", "Ngetal", "Pelajar Mahasiswa");
+
+doni.tampilkanData()
