@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inheritance</title>
+    <link rel="stylesheet" href="/css/style_base.css">
+    <link rel="icon" type="image/jpeg" href="/assets/jslogo.jpeg">
+</head>
+<body>
+    <nav>
+        <div class="nav-items">
+            <img src="/assets/bro.png" alt="Bro Code">
+            <!--Nav title-->
+            <p>inheritance</p>
+        </div>
+        <div class="nav-items">
+            <a href="/index.html"><button>Homepage</button></a>
+        </div>
+    </nav>
+    <main class="margin">
+        <div class="container">
+            <section>
+                <!--content title-->
+                <h1>inheritance</h1>
+                <hr>
+                <p>JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM). </p>
+            </section>
+            <section>
+                <h1>Main Content</h1>
+                <hr>
+            </section>
+            <section>
+                <h1>Scripts</h1>
+                <pre id="code">
+/*
+inheritance = allows a new class to inherit properties and methods
+              from an existing class (parent -> child)
+              helps with code reusability
+
+inheritance = memungkinkan kelas baru untuk mewarisi properti dan metode
+              dari kelas yang sudah ada (induk -> anak)
+              membantu penggunaan kembali kode
+*/
+
+class Animal {
+    // Properti umum untuk semua kelas anak (Rabbit, Fish, Bird)
+    alive = true;
+
+    // Metode umum yang akan diwarisi oleh semua kelas anak
+    eat() {
+        console.log(`This ${this.name} is eating`);
+    }
+
+    // Metode lain yang bisa digunakan oleh kelas anak
+    sleep() {
+        console.log(`This ${this.name} is sleeping`);
+    }
+}
+
+// Kelas Rabbit mewarisi properti dan metode dari kelas Animal
+class Rabbit extends Animal {
+    // Properti khusus untuk Rabbit
+    name = "rabbit";
+    
+    // Metode khusus untuk Rabbit
+    hop() {
+        console.log("\n");  // Menambahkan baris kosong di output
+        console.log(`this ${this.name} is hopping`);
+    }
+}
+
+// Kelas Fish mewarisi properti dan metode dari kelas Animal
+class Fish extends Animal {
+    // Properti khusus untuk Fish
+    name = "fish";
+}
+
+// Kelas Bird mewarisi properti dan metode dari kelas Animal
+class Bird extends Animal {
+    // Properti khusus untuk Bird
+    name = "bird";
+}
+
+// Membuat instance dari kelas Rabbit dan Bird
+const rabbit = new Rabbit();
+const bird = new Bird();
+
+// Memanggil metode eat() dan sleep() yang diwarisi dari Animal
+rabbit.eat();   // Output: This rabbit is eating
+rabbit.sleep(); // Output: This rabbit is sleeping
+bird.eat();     // Output: This bird is eating
+bird.sleep();   // Output: This bird is sleeping
+
+// Memanggil metode hop() khusus untuk Rabbit
+rabbit.hop();   // Output: this rabbit is hopping
+
+                </pre>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>So sit back, relax, and enjoy the show! | Theme: <span style="color: rgb(251, 255, 43); background-color: black;">Solid Yellow</span></p>
+    </footer>
+    <script src="/script/41. inheritance.js"></script>
+</body>
+</html>
